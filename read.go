@@ -36,6 +36,7 @@ func fetch(url string)  {
 		defer func() {
 			err := recover()
 			if err != nil {
+				k += 1
 				return
 			}
 		}()
@@ -45,10 +46,9 @@ func fetch(url string)  {
 		cmd.Run()
 		fmt.Printf("\r%s\r", line)
 		if *num != 0{
-
 			time.Sleep(time.Duration(*num) * time.Second)
 			n += 1
-			continue
+			break
 		}else {
 			for {
 				keysEvents, err := keyboard.GetKeys(10)
