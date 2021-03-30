@@ -48,7 +48,7 @@ func fetch(url string)  {
 		if *num != 0{
 			time.Sleep(time.Duration(*num) * time.Second)
 			n += 1
-			break
+			continue
 		}else {
 			for {
 				keysEvents, err := keyboard.GetKeys(10)
