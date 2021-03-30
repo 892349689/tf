@@ -31,7 +31,7 @@ func request(url string) {
 				fetch(rell)
 				*section = ""
 			} else {
-				fetch(rell)
+				k += 1
 			}
 		} else {
 			fetch(rell)
